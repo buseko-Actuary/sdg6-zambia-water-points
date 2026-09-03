@@ -1,0 +1,133 @@
+{
+  "dataset": {
+    "n_rows": 4026,
+    "n_broken": 476,
+    "prevalence": 0.11823149528067561,
+    "n_districts": 61,
+    "n_features": 13
+  },
+  "cv_grouped_by_district": {
+    "Baseline (predict prevalence)": {
+      "ap_mean": 0.10596826687876497,
+      "ap_std": 0.028039172235703992,
+      "auc_mean": 0.5,
+      "auc_std": 0.0,
+      "rule_ap": 0.18355635399792353,
+      "rule_auc": 0.6110456264106836
+    },
+    "Logistic Regression": {
+      "ap_mean": 0.1774751108972153,
+      "ap_std": 0.1064532437570783,
+      "auc_mean": 0.5411676423137685,
+      "auc_std": 0.13775428123492225,
+      "rule_ap": 0.18355635399792353,
+      "rule_auc": 0.6110456264106836
+    },
+    "Random Forest": {
+      "ap_mean": 0.2387559262925661,
+      "ap_std": 0.14713553279948385,
+      "auc_mean": 0.6135301499948568,
+      "auc_std": 0.13300224291897092,
+      "rule_ap": 0.18355635399792353,
+      "rule_auc": 0.6110456264106836
+    },
+    "Gradient Boosting": {
+      "ap_mean": 0.1851122822816579,
+      "ap_std": 0.09323377805111928,
+      "auc_mean": 0.5649153681469337,
+      "auc_std": 0.1189676388391068,
+      "rule_ap": 0.18355635399792353,
+      "rule_auc": 0.6110456264106836
+    }
+  },
+  "split_comparison": {
+    "Logistic Regression": {
+      "random_ap": 0.25552548002969566,
+      "grouped_ap": 0.1774751108972153,
+      "optimism": 0.07805036913248037
+    },
+    "Random Forest": {
+      "random_ap": 0.38993583683685396,
+      "grouped_ap": 0.2387559262925661,
+      "optimism": 0.15117991054428787
+    },
+    "Gradient Boosting": {
+      "random_ap": 0.3443476445462631,
+      "grouped_ap": 0.1851122822816579,
+      "optimism": 0.1592353622646052
+    }
+  },
+  "leakage_demo": {
+    "with_rehab_priority_ap": 0.9961732314612259,
+    "with_rehab_priority_auc": 0.998100659714833,
+    "without_ap": 0.2387559262925661,
+    "without_auc": 0.6135301499948568
+  },
+  "held_out_districts": {
+    "model": "Random Forest",
+    "n_test": 669,
+    "n_test_districts": 5,
+    "n_broken": 83,
+    "prevalence": 0.12406576980568013,
+    "pr_auc": 0.19988055916682074,
+    "pr_auc_ci95": [
+      0.14434299356533792,
+      0.28351491127456774
+    ],
+    "roc_auc": 0.6133578683334019,
+    "roc_auc_ci95": [
+      0.5430193584181364,
+      0.6781147122994013
+    ],
+    "brier": 0.169534687339011,
+    "age_rule_pr_auc": 0.19133614806931346,
+    "age_rule_roc_auc": 0.6423269871294051
+  },
+  "inspection_curve": [
+    {
+      "visit_top_pct": 5,
+      "points_visited": 33,
+      "broken_found": 10,
+      "of_total_broken": 83,
+      "precision_at_k": 0.303,
+      "recall_at_k": 0.12,
+      "lift_vs_random": 2.44
+    },
+    {
+      "visit_top_pct": 10,
+      "points_visited": 67,
+      "broken_found": 16,
+      "of_total_broken": 83,
+      "precision_at_k": 0.239,
+      "recall_at_k": 0.193,
+      "lift_vs_random": 1.92
+    },
+    {
+      "visit_top_pct": 20,
+      "points_visited": 134,
+      "broken_found": 31,
+      "of_total_broken": 83,
+      "precision_at_k": 0.231,
+      "recall_at_k": 0.373,
+      "lift_vs_random": 1.86
+    },
+    {
+      "visit_top_pct": 30,
+      "points_visited": 201,
+      "broken_found": 38,
+      "of_total_broken": 83,
+      "precision_at_k": 0.189,
+      "recall_at_k": 0.458,
+      "lift_vs_random": 1.52
+    },
+    {
+      "visit_top_pct": 50,
+      "points_visited": 334,
+      "broken_found": 51,
+      "of_total_broken": 83,
+      "precision_at_k": 0.153,
+      "recall_at_k": 0.614,
+      "lift_vs_random": 1.23
+    }
+  ]
+}

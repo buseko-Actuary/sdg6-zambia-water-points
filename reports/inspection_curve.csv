@@ -1,0 +1,6 @@
+visit_top_pct,points_visited,broken_found,of_total_broken,precision_at_k,recall_at_k,lift_vs_random
+5,33,10,83,0.303,0.12,2.44
+10,67,16,83,0.239,0.193,1.92
+20,134,31,83,0.231,0.373,1.86
+30,201,38,83,0.189,0.458,1.52
+50,334,51,83,0.153,0.614,1.23

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Raw and processed data ARE committed on purpose, so the pipeline runs
+# offline and every figure in the README can be regenerated. They are small
+# (under 3 MB) and openly licensed. See DATA_LICENCE.md.
