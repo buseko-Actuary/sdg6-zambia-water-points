@@ -8,6 +8,16 @@ The headline result of this project is not a score. It is that **three separate 
 
 ---
 
+## 📓 Read it end to end
+
+If you would rather follow the whole thing as a story than read four scripts, start here:
+
+**[`notebooks/water-point-failure-walkthrough.ipynb`](notebooks/water-point-failure-walkthrough.ipynb)**
+
+The same data and the same decisions, in the order they were actually made, with the reasoning written between the cells and the dead ends left in. All outputs are committed, so it reads without running anything. GitHub renders it in the browser.
+
+---
+
 ## 🗺️ The data
 
 ![Water points across Zambia](reports/figures/06_map.png)
@@ -211,6 +221,9 @@ python src/data_prep.py
 python src/ablation.py
 python src/train.py
 python src/evaluate.py
+
+# or read the whole story with outputs already committed:
+jupyter notebook notebooks/water-point-failure-walkthrough.ipynb
 ```
 
 The raw export is committed, so the pipeline runs offline and every number in this README is reproducible. To refresh it from source, download `wpdx_water_points_zmb.csv` from the [HDX dataset page](https://data.humdata.org/dataset/wpdx_zmb) into `data/raw/`.
@@ -230,6 +243,9 @@ Every random seed is fixed at 42.
 │   ├── ablation.py     which features earn their place
 │   ├── train.py        grouped CV, leakage demo, held-out evaluation
 │   └── evaluate.py     figures
+├── notebooks/
+│   ├── water-point-failure-walkthrough.ipynb   the whole project as a narrative
+│   └── build_notebook.py                       regenerates it
 ├── reports/
 │   ├── figures/        the six figures in this README
 │   ├── metrics.json    every number quoted above
